@@ -10,4 +10,10 @@
 
 @implementation LiuCController
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    NSLog(@"给自己加点东西呢");
+}
+
 @end
