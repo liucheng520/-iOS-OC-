@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UI</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>广告轮播图</string>
+			<key>describtion</key>
+			<string>支持&lt;code&gt;网络&lt;/code&gt;和&lt;code&gt;本地&lt;/code&gt;图片轮播,&lt;strong&gt;高度集成&lt;/strong&gt;,历经多个项目测试和修改，&lt;green&gt;稳定可靠&lt;/green&gt;,支持广告点击响应（&lt;red&gt;广告图不宜过大，像素不宜过高&lt;/red&gt;）</string>
+			<key>creatTime</key>
+			<string>2015-11-18</string>
+			<key>viewController</key>
+			<string>AdsPageExampleViewController</string>
+			<key>type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>仿新浪微博个人中心效果</string>
+			<key>describtion</key>
+			<string>仿照新浪个人中心上滑和下滑时的选项卡的上移和下移的效果，使用时需要继承成子类使用，可以完全自定义各类元素,可以对各个部位灵活的自我控制</string>
+			<key>creatTime</key>
+			<string>2015-11-19</string>
+			<key>viewController</key>
+			<string>SegmentExampleViewController</string>
+			<key>type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>扁平化的选项卡控件</string>
+			<key>describtion</key>
+			<string>简单有质感的选项卡控件，可支持很多很多个选项卡的需求，可以放图片和文字，可以自定义分隔线，以及选中的底部条，简单易用,选项卡数量超过一屏，点击或者滑动的时候还会自动调整位置</string>
+			<key>creatTime</key>
+			<string>2015-11-20</string>
+			<key>viewController</key>
+			<string>TabExampleViewController</string>
+			<key>type</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>SuylUI</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>webview计算高度</string>
+			<key>describtion</key>
+			<string>图文混排</string>
+			<key>creatTime</key>
+			<string>2015-11-18</string>
+			<key>viewController</key>
+			<string>WebHeightViewController</string>
+			<key>type</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

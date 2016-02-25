@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="257" id="Bop-rF-Mei" customClass="YucMainTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="457" height="257"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bop-rF-Mei" id="f3o-Xu-DIW">
+                <rect key="frame" x="0.0" y="0.0" width="424" height="256"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oam-bL-hig">
+                        <rect key="frame" x="367" y="10" width="47" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZ6-4d-Syb">
+                        <rect key="frame" x="23" y="44" width="391" height="196"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qec-Fb-dER">
+                        <rect key="frame" x="23" y="7" width="44" height="22"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWo-LY-EJy">
+                        <rect key="frame" x="20" y="255" width="404" height="1"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="jku-Yg-XOX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="bZ6-4d-Syb" firstAttribute="top" secondItem="qec-Fb-dER" secondAttribute="bottom" constant="15" id="5Fw-dy-CTt"/>
+                    <constraint firstAttribute="trailing" secondItem="bZ6-4d-Syb" secondAttribute="trailing" constant="10" id="C1D-sX-aF2"/>
+                    <constraint firstAttribute="trailing" secondItem="oWo-LY-EJy" secondAttribute="trailing" id="CTQ-3y-auG"/>
+                    <constraint firstAttribute="bottom" secondItem="oWo-LY-EJy" secondAttribute="bottom" id="FnG-ev-qFW"/>
+                    <constraint firstItem="qec-Fb-dER" firstAttribute="top" secondItem="f3o-Xu-DIW" secondAttribute="top" constant="7" id="G08-xL-Zyj"/>
+                    <constraint firstItem="oWo-LY-EJy" firstAttribute="leading" secondItem="f3o-Xu-DIW" secondAttribute="leading" constant="20" id="ICl-be-gSP"/>
+                    <constraint firstItem="oam-bL-hig" firstAttribute="top" secondItem="f3o-Xu-DIW" secondAttribute="top" constant="10" id="eIc-HG-Amc"/>
+                    <constraint firstItem="bZ6-4d-Syb" firstAttribute="leading" secondItem="qec-Fb-dER" secondAttribute="leading" id="eqO-3R-suS"/>
+                    <constraint firstItem="oam-bL-hig" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qec-Fb-dER" secondAttribute="trailing" constant="20" id="lwp-ip-IIS"/>
+                    <constraint firstItem="qec-Fb-dER" firstAttribute="leading" secondItem="f3o-Xu-DIW" secondAttribute="leading" constant="23" id="wCL-bx-fUA"/>
+                    <constraint firstAttribute="trailing" secondItem="oam-bL-hig" secondAttribute="trailing" constant="10" id="wep-8y-xUY"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="bZ6-4d-Syb" secondAttribute="bottom" constant="8" id="xLs-mn-zz0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="creatTimeLabel" destination="oam-bL-hig" id="xZN-xe-wxu"/>
+                <outlet property="detailLabel" destination="bZ6-4d-Syb" id="BOa-dl-cyG"/>
+                <outlet property="titleLabel" destination="qec-Fb-dER" id="PZk-9q-coZ"/>
+            </connections>
+            <point key="canvasLocation" x="355.5" y="294.5"/>
+        </tableViewCell>
+    </objects>
+</document>

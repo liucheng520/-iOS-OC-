@@ -1,0 +1,53 @@
+//
+//  PrefixHeader.pch
+//  武汉二部iOS基础框架
+//
+//  Created by 苏荷 on 15/9/23.
+//  Copyright (c) 2015年 BlueMobi. All rights reserved.
+//
+
+#ifndef ____iOS_____PrefixHeader_pch
+#define ____iOS_____PrefixHeader_pch
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+// 分类
+#import "UIView+Extension.h"
+#import "NSString+Extention.h"
+#import "UIBarButtonItem+MJ.h"
+#import "UIImage+Extention.h"
+#import "NSDate+LC.h"
+#import "UIImageView+WebCache.h"
+
+// 工具类
+#import "Check.h"
+#import "Common.h"
+#import "BMUtil.h"
+
+// 单例
+#undef	AS_SINGLETON
+#define AS_SINGLETON( __class ) \
++ (__class *)sharedInstance;
+
+#undef	DEF_SINGLETON
+#define DEF_SINGLETON( __class ) \
++ (__class *)sharedInstance \
+{ \
+static dispatch_once_t once; \
+static __class * __singleton__; \
+dispatch_once( &once, ^{ __singleton__ = [[__class alloc] init]; } ); \
+return __singleton__; \
+}
+
+//获取屏幕宽度
+#define KScreenWidth  [UIScreen mainScreen].bounds.size.width
+
+//获取屏幕高度
+#define KScreenHeight [UIScreen mainScreen].bounds.size.height
+
+//颜色获取
+#define DEF_COLOR(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+
+#define rgba(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+
+#endif

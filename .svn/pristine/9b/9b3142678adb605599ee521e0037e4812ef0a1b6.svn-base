@@ -1,0 +1,68 @@
+//
+//  GetInController.m
+//  武汉二部iOS基础框架
+//
+//  Created by 刘成 on 15/9/24.
+//  Copyright (c) 2015年 BlueMobi. All rights reserved.
+//
+
+#import "GetInCell.h"
+
+@interface GetInCell()
+
+@property (nonatomic,weak) UIImageView *iconImage;
+
+@property (nonatomic,weak) UILabel *nickNameL;
+
+@property (nonatomic,weak) UILabel *personalityL;
+
+@end
+
+@implementation GetInCell
+
+- (void)creatSubviews
+{
+    [super creatSubviews];
+    
+    //个人头像
+    UIImageView *icon = [[UIImageView alloc]init];
+    [self.contentView addSubview:icon];
+    self.iconImage = icon;
+    
+    //昵称
+    UILabel *nickNamel = [[UILabel alloc]init];
+    nickNamel.font = [UIFont systemFontOfSize:16.0f];
+    [self.contentView addSubview:nickNamel];
+    self.nickNameL = nickNamel;
+    
+    //个人签名
+    UILabel *personalityL = [[UILabel alloc]init];
+    personalityL.font = [UIFont systemFontOfSize:14.0f];
+    personalityL.textColor = DEF_COLOR(90, 90, 90);
+    [self.contentView addSubview:personalityL];
+    self.personalityL = personalityL;
+}
+
+- (void)setModel:(Member *)model
+{
+    _model = model;
+    self.iconImage.image = [UIImage imageNamed:_model.iconUrl];
+    self.nickNameL.text = _model.nickName;
+    self.personalityL.text = _model.personality;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    self.iconImage.frame = CGRectMake(10, 10, 60, 60);
+    self.iconImage.layer.cornerRadius = 4.0f;
+    self.iconImage.layer.masksToBounds = YES;
+    self.nickNameL.frame = CGRectMake(80, 5, KScreenWidth - 80, 35);
+    self.personalityL.frame = CGRectMake(80, 35, KScreenWidth - 80, 35);
+    
+    //下滑线
+    self.line.frame = CGRectMake(10, self.height - 1, KScreenWidth - 20, 1);
+}
+
+@end

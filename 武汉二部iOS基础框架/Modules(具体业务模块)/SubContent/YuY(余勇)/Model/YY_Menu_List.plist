@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>YyUI</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>弹出选择器</string>
+			<key>describtion</key>
+			<string>自定义segment，弹出框和自定义alertView</string>
+			<key>creatTime</key>
+			<string>2015-11-24</string>
+			<key>viewController</key>
+			<string>PopupSelectorViewController</string>
+			<key>type</key>
+			<string>0</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oeQ-Mb-1H5">
+            <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LZn-mK-i5H">
+                        <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
+                        <animations/>
+                    </imageView>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <animations/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="LZn-mK-i5H" secondAttribute="trailing" id="8YQ-FQ-k84"/>
+                <constraint firstItem="LZn-mK-i5H" firstAttribute="top" secondItem="oeQ-Mb-1H5" secondAttribute="top" id="U23-Ha-b8w"/>
+                <constraint firstItem="LZn-mK-i5H" firstAttribute="leading" secondItem="oeQ-Mb-1H5" secondAttribute="leading" id="lk4-EW-k7s"/>
+                <constraint firstAttribute="bottom" secondItem="LZn-mK-i5H" secondAttribute="bottom" id="wGK-2k-M7y"/>
+            </constraints>
+            <point key="canvasLocation" x="428" y="177"/>
+        </collectionViewCell>
+    </objects>
+</document>

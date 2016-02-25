@@ -1,0 +1,95 @@
+//
+//  WebHeightViewController.m
+//  武汉二部iOS基础框架
+//
+//  Created by suyl on 15/11/18.
+//  Copyright © 2015年 BlueMobi. All rights reserved.
+//
+
+#import "WebHeightViewController.h"
+
+@interface WebHeightViewController ()<UIWebViewDelegate>
+
+@property (nonatomic,weak)UIWebView*webView;
+@property (nonatomic,weak)UIScrollView*scrollView;
+
+
+@end
+
+@implementation WebHeightViewController
+
+-(void)viewDidLoad{
+    self.title = @"webView计算高度";
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self initView];
+}
+
+-(void)initView{
+    
+    self.automaticallyAdjustsScrollViewInsets= NO;
+    UIScrollView *scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight-64)];
+//    scroll.backgroundColor = [UIColor redColor];
+    [self.view addSubview:scroll];
+    self.scrollView = scroll;
+    
+    UIWebView *web = [[UIWebView alloc] initWithFrame:CGRectMake(5, 0, KScreenWidth-10, 0)];
+    web.delegate = self;
+    web.userInteractionEnabled = NO;
+    web.scrollView.alwaysBounceHorizontal = YES;
+    [web setScalesPageToFit:YES];
+    [scroll addSubview:web];
+    self.webView = web;
+    
+    NSString *html1 = @"<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0\"><meta content=\"yes\" name=\"apple-mobile-web-app-capable\"><meta content=\"black\" name=\"apple-mobile-web-app-status-bar-style\"><meta content=\"telephone=no\" name=\"format-detection\"><style type=\"text/css\">body { font-family: Arial,\"microsoft yahei\",Verdana; padding:0;	margin:0; font-size:12px; color:#000; background: #fff; overflow-x:hidden; }body,div,fieldset,form,h1,h2,h3,h4,h5,h6,html,p,span { -webkit-text-size-adjust: none}h1,h2,h3,h4,h5,h6 { font-weight:normal; }applet,dd,div,dl,dt,h1,h2,h3,h4,h5,h6,html,iframe,img,object,p,span {	padding: 0;	margin: 0;	border: none}img {padding:0; margin:0; vertical-align:top; border: none}li,ul {list-style: none outside none; padding: 0; margin: 0}input[type=text],select {-webkit-appearance:none; -moz-appearance: none; margin:0; padding:0; background:none; border:none; font-size:14px; text-indent:3px; font-family: Arial,\"microsoft yahei\",Verdana;}body { width:100%;}p { color:#666; line-height:1.6em; margin-bottom:10px;} img { max-width:100%; width:auto !important; height:auto !important; margin-bottom:10px;}</style>";
+    
+    NSString *showString = @"刘若英一直是高票房的保证，鉴于上海场的情形以及上一轮巡演北京场的火爆票房来看，为了让歌迷朋友们尽早做好抢票准备，此次北京演唱会将于7月13日正式开启预售，希望大家能够尽快做出\"选择\"，以免造成遗憾。<p style=\"text-indent:2em;\"><br /></p><p style=\"text-align:center;\"><img src=\"http://static.228.cn/upload/Image/201508/1440468226449_8709_x.jpg\" title=\"刘若英“Renext 我敢”世界巡回演唱会北京站\" style=\"width:500px;height:334px;\" border=\"0\" height=\"334\" width=\"500\" /></p><p style=\"text-align:center;\"><br /></p><p style=\"text-indent:2em;\"><strong>11月28日刘若英用歌声袒露心境，期待与歌迷像老朋友一样见面 </strong></p><p style=\"text-indent:2em;\">作为一个诠释过无数种人格、演绎过无数他人故事的演员、歌手，刘若英始终保持着自己独有的感性知性兼具的风格，清新又亲切的形象一直深入大众内心，在她的歌声中存在着很浓厚的个人情感色彩，能够轻易地感染听众，并且可以将真挚的、有感而发的东西通过歌声去坦白表露出来。刘若英的歌曲不论是业界评价还是大众口碑都非常高，演唱会也是高质量的音乐和高品质的舞台作为双重保障，上轮巡演\"脱掉高跟鞋\"20场演出，几乎场场爆满，很多人表示，看刘若英的演唱会不仅仅是听音乐，更像是一场好久未见的老朋友的会面，单独听她说话就已经受益匪浅了。</p><p style=\"text-indent:2em;\">而此次\"我敢\"演唱会是刘若英阔别北京舞台五年的首次个唱，刘若英再穿上高跟鞋、战战兢兢回归初心就像\"第一次\"办个人演唱会，并表示，\"心情像新人，到不一样的地方演出，希望能让更多人一起感动。也去探望老朋友，老同学。也希望在海外求学的朋友能像看老朋友一样来看看我\"。而对于此次演唱会\"我敢\"这个名字，刘若英表示，\"到了这个阶段，快乐与幸福，工作与生活，关乎选择，只是你有没有意识到自己可以选择，以及有没有勇气选择。我选择我所想要的，所以我敢。\"</p><p style=\"text-align:center;\"><br /></p><p style=\"text-align:center;\"><img src=\"http://static.228.cn/upload/Image/201506/1435208115476_3506_x.jpg\" alt=\"刘若英“Renext 我敢”世界巡回演唱会北京站\" title=\"刘若英“Renext 我敢”世界巡回演唱会北京站\" style=\"width:500px;height:333px;\" border=\"0\" height=\"333\" width=\"500\" /></p><p style=\"text-align:center;\"><br /></p><p style=\"text-indent:2em;\"><strong>才女刘若英强势回归，北京演唱会将把\"一本书\"唱成\"一首歌\" </strong></p><p style=\"text-indent:2em;\">刘若英推出的第六本创作文集《我敢在你怀里孤独》，是她与八名好友的对谈、分享独处经历的精华呈现。刘若英将这一年来的沈思体会，都注入创作里，成书，成歌，同时也是婚后对两人关系更进一步的思索，因为珍惜，所以战战兢兢，念念不忘。在决定录制成歌曲之后，刘若英因为觉得在上次合作的《亲爱的路人》这首词里，林夕写出了她最深层的心情，所以此次再次邀请林夕来写《我敢在你怀里孤独》的歌词，以便更直接地承接她的心境。</p><p style=\"text-indent:2em;\">《我敢在你怀里孤独》这本书在网络书店销售非常好，在重要电商京东与当当都拿下双冠，京东文学类销售排行榜第一，文学类新书畅销第一；当当网更是精装本，平装本，分别占下第一二名。而在此次北京演唱会上，刘若英也将把书里对于\"孤独\"的感悟在舞台上分享给现场的所有朋友，一起感受幸福。</p>";
+    
+    NSString *htmlContent = [NSString stringWithFormat:@"%@%@</body></html>",html1, showString];
+    if (showString.length) {
+        [web loadHTMLString:htmlContent baseURL:nil];
+    }
+}
+
+
+#pragma mark  webView Delegate
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    
+    
+    CGRect frame = webView.frame;
+    frame.size.height = 1;
+    frame.size.width = KScreenWidth-10;
+    webView.frame = frame;
+    
+    NSString *meta = [NSString stringWithFormat:@"document.getElementsByName(\"viewport\")[0].content= \"width=1.0,initial-scale=0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes\""];
+    [webView stringByEvaluatingJavaScriptFromString:meta];
+    NSString *height_str= [webView stringByEvaluatingJavaScriptFromString: @"document.body.offsetHeight"];
+    
+    
+    float _height = [height_str floatValue]+10;
+    //    float _height = webView.scrollView.contentSize.height;
+    CGRect newFrame = webView.frame;
+    newFrame.size.height = _height;
+    
+    
+    
+    self.webView.frame =newFrame;
+    self.scrollView.contentSize = CGSizeMake(KScreenWidth, _height);
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
+
+@end
